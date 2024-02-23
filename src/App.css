@@ -1,0 +1,88 @@
+/* src/App.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(ellipse at center, #001c3d 0%, #000 100%);
+  color: #fff;
+}
+
+h1 {
+  color: #ffc107; /* Yellow color for the title */
+  margin: 20px 0;
+  text-align: center;
+}
+
+.planets-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.planet-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.planet-card:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #ffc107; /* Yellow color for planet names */
+}
+
+p {
+  color: #ddd; /* Light gray color for text */
+  margin: 8px 0;
+}
+
+h3 {
+  color: #ffc107; /* Yellow color for resident heading */
+  margin-top: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+button {
+  background-color: #ffc107; /* Yellow color for buttons */
+  color: #000; /* Black color for button text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff8f00; /* Darker yellow on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .planets-list {
+    grid-template-columns: 1fr;
+  }
+
+  .planet-card {
+    width: 100%; /* Adjust card width for small screens */
+  }
+}
